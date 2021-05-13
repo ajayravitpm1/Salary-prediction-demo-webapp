@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 model=pickle.load(open('model_salary.pkl','rb'))
 app=Flask(__name__)
-@app.route('/home')
+@app.route("/")
 def home():
     return render_template("home.html")
 @app.route("/predict",methods=['POST'])
